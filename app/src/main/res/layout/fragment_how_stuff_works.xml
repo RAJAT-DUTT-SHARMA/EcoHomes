@@ -1,0 +1,693 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="iot.iiitb.com.ecohome.HowStuffWorks"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="How is EIAQI Calculated"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textSize="15sp"
+        android:text="Data Collected  :  \n\n\t\t  Pollutants : \n\t\t\t Carbon Monooxide (CO) , \n\t\t\t\ Particulate Matter 10 (PM10), \n\t\t\t Volatile Organic Compound (VOC) \n\n\t\t  Others:  \n\t\t\t Temperature, \n\t\t\t Humidity "
+        />
+        <TextView
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="How Numbers are calculated: "
+            android:textSize="15sp"
+            />
+        <TextView
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AIR QUALITY INDEX (AQI) : \n\t\tIt depicts the air quality of indoor environment on a scale of 1-100.\nPollutant concentration readings are averaged over 24 hours and the AQI is calculated according to standard guidelines."
+            android:textSize="15sp"
+            />
+        <TableLayout
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableRow android:layout_gravity="center"
+                >
+
+                <TextView
+                    android:background="@drawable/cell_shape"
+                    android:padding="3dip"
+                    android:text="CO\n(ppm)" />
+
+                <TextView
+                    android:padding="3dip"
+                    android:background="@drawable/cell_shape"
+                    android:text="VOC\n(ppm)" />
+
+                <TextView
+                    android:background="@drawable/cell_shape"
+                    android:padding="3dip"
+                    android:text="PM10\n(mg/m3)" />
+
+                <TextView
+                    android:background="@drawable/cell_shape"
+                    android:padding="3dip"
+                    android:text="IAQI\n"
+                    />
+
+                <TextView
+                    android:background="@drawable/cell_shape"
+                    android:padding="3dip"
+                    android:text="IAQI\nStatus "
+                    />
+            </TableRow>
+
+            <TableRow android:layout_gravity="center"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:background="@drawable/cell_color_blue"
+                    android:padding="3dip"
+                    android:text="0.0-1.7" />
+
+                <TextView
+                    android:padding="3dip"
+                    android:background="@drawable/cell_color_blue"
+                    android:text="0.000-0.087" />
+
+                <TextView
+                    android:background="@drawable/cell_color_blue"
+                    android:padding="3dip"
+                    android:text="0.000-0.020" />
+
+                <TextView
+                    android:background="@drawable/cell_color_blue"
+                    android:padding="3dip"
+                    android:text="100-76"
+                    />
+
+                <TextView
+                    android:background="@drawable/cell_color_blue"
+                    android:padding="3dip"
+                    android:text="Good"
+                    />
+            </TableRow>
+
+            <TableRow android:layout_gravity="center">
+
+                <TextView
+                    android:background="@drawable/cell_color_green"
+                    android:padding="3dip"
+                    android:text="1.8-8.7" />
+
+                <TextView
+                    android:padding="3dip"
+                    android:background="@drawable/cell_color_green"
+                    android:text="0.088-0.261" />
+
+                <TextView
+                    android:background="@drawable/cell_color_green"
+                    android:padding="3dip"
+                    android:text="0.021-0.150" />
+
+                <TextView
+                    android:background="@drawable/cell_color_green"
+                    android:padding="3dip"
+                    android:text="75-51"
+                    />
+
+                <TextView
+                    android:background="@drawable/cell_color_green"
+                    android:padding="3dip"
+                    android:text="Moderate"
+                    />
+            </TableRow>
+
+            <TableRow android:layout_gravity="center">
+
+                <TextView
+                    android:background="@drawable/cell_color_yellow"
+                    android:padding="3dip"
+                    android:text="8.8-10.0" />
+
+                <TextView
+                    android:padding="3dip"
+                    android:background="@drawable/cell_color_yellow"
+                    android:text="0.262-0.43" />
+
+                <TextView
+                    android:background="@drawable/cell_color_yellow"
+                    android:padding="3dip"
+                    android:text="0.151-0.180" />
+
+                <TextView
+                    android:background="@drawable/cell_color_yellow"
+                    android:padding="3dip"
+                    android:text="50-26"
+                    />
+
+                <TextView
+                    android:background="@drawable/cell_color_yellow"
+                    android:padding="3dip"
+                    android:text="Unhealthy"
+                    />
+            </TableRow>
+
+            <TableRow android:layout_gravity="center">
+
+                <TextView
+                    android:background="@drawable/cell_color_red"
+                    android:padding="3dip"
+                    android:text="10.1-50.0" />
+
+                <TextView
+                    android:padding="3dip"
+                    android:background="@drawable/cell_color_red"
+                    android:text="0.44-3.00" />
+
+                <TextView
+                    android:background="@drawable/cell_color_red"
+                    android:padding="3dip"
+                    android:text="0.181-0.6" />
+
+                <TextView
+                    android:background="@drawable/cell_color_red"
+                    android:padding="3dip"
+                    android:text="25-0"
+                    />
+
+                <TextView
+                    android:background="@drawable/cell_color_red"
+                    android:padding="3dip"
+                    android:text="Hazardous"
+                    />
+            </TableRow>
+        </TableLayout>
+
+
+        <TextView
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="THERMAL COMFORT INDEX (TCI) : \n\t\tTCI depicts the comfort level of indoor environment on a scale of 1-100 .\nIt depends solely on current temperature and humidity in the indoor environment."
+            android:textSize="15sp"
+            />
+
+        <TableLayout
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableRow android:layout_gravity="center"
+                >
+
+                <TextView
+                    android:padding="3dip"
+                    android:background="@drawable/cell_shape"
+                    android:text="Temperature (C)" />
+
+                <TextView
+                    android:background="@drawable/cell_shape"
+                    android:padding="3dip"
+                    android:text="Humidity (%)" />
+
+                <TextView
+                    android:background="@drawable/cell_shape"
+                    android:padding="3dip"
+                    android:text="TCI"
+                    />
+
+                <TextView
+                    android:background="@drawable/cell_shape"
+                    android:padding="3dip"
+                    android:text="Status "
+                    />
+            </TableRow>
+
+            <TableRow android:layout_gravity="center"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:padding="3dip"
+                    android:background="@drawable/cell_color_blue"
+                    android:text="20.0-26.0" />
+
+                <TextView
+                    android:background="@drawable/cell_color_blue"
+                    android:padding="3dip"
+                    android:text="40-70.0" />
+
+                <TextView
+                    android:background="@drawable/cell_color_blue"
+                    android:padding="3dip"
+                    android:text="100-76"
+                    />
+
+                <TextView
+                    android:background="@drawable/cell_color_blue"
+                    android:padding="3dip"
+                    android:text="Most Comfort"
+                    />
+            </TableRow>
+
+            <TableRow android:layout_gravity="center">
+
+
+                <TextView
+                    android:padding="3dip"
+                    android:background="@drawable/cell_color_green"
+                    android:text="26.1-29.0" />
+
+                <TextView
+                    android:background="@drawable/cell_color_green"
+                    android:padding="3dip"
+                    android:text="70.1-80.0" />
+
+                <TextView
+                    android:background="@drawable/cell_color_green"
+                    android:padding="3dip"
+                    android:text="75-51"
+                    />
+
+                <TextView
+                    android:background="@drawable/cell_color_green"
+                    android:padding="3dip"
+                    android:text="Comfort"
+                    />
+            </TableRow>
+
+            <TableRow android:layout_gravity="center">
+
+                <TextView
+                    android:padding="3dip"
+                    android:background="@drawable/cell_color_yellow"
+                    android:text="29.1-39.0" />
+
+                <TextView
+                    android:background="@drawable/cell_color_yellow"
+                    android:padding="3dip"
+                    android:text="80.1-90.0" />
+
+                <TextView
+                    android:background="@drawable/cell_color_yellow"
+                    android:padding="3dip"
+                    android:text="50-26"
+                    />
+
+                <TextView
+                    android:background="@drawable/cell_color_yellow"
+                    android:padding="3dip"
+                    android:text="Not Comfort"
+                    />
+            </TableRow>
+
+            <TableRow android:layout_gravity="center">
+
+                <TextView
+                    android:padding="3dip"
+                    android:background="@drawable/cell_color_red"
+                    android:text="39.1-45.0" />
+
+                <TextView
+                    android:background="@drawable/cell_color_red"
+                    android:padding="3dip"
+                    android:text="90.1-100.0" />
+
+                <TextView
+                    android:background="@drawable/cell_color_red"
+                    android:padding="3dip"
+                    android:text="25-0"
+                    />
+
+                <TextView
+                    android:background="@drawable/cell_color_red"
+                    android:padding="3dip"
+                    android:text="Least Comfort"
+                    />
+            </TableRow>
+
+
+        </TableLayout>
+
+
+
+        <TextView
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EFFECTIVE AIR QUALITY INDEX (AQI) : \n\t\tDepicts the effective indoor environment quality level on a scale of (-3)-7 .\nIt is calculated from AQI and TCI according to wightage summation system ."
+            android:textSize="15sp"
+            />
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <TableRow android:layout_gravity="center"
+                >
+                <TextView
+                    android:background="@drawable/cell_shape"
+                    android:padding="3dip"
+                    android:text="IAQI\n"
+                    />
+
+                <TextView
+                    android:background="@drawable/cell_shape"
+                    android:padding="3dip"
+                    android:text="IAQI\nStatus "
+                    />
+                <TextView
+                    android:background="@drawable/cell_shape"
+                    android:padding="3dip"
+                    android:text="IAQI\n Weightage "
+                    />
+
+
+            </TableRow>
+
+            <TableRow android:layout_gravity="center"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:background="@drawable/cell_color_blue"
+                    android:padding="3dip"
+                    android:text="100-76"
+                    />
+
+                <TextView
+                    android:background="@drawable/cell_color_blue"
+                    android:padding="3dip"
+                    android:text="Good"
+                    />
+                <TextView
+                    android:background="@drawable/cell_color_blue"
+                    android:padding="3dip"
+                    android:text="3"
+                    />
+
+
+            </TableRow>
+
+            <TableRow android:layout_gravity="center">
+
+                <TextView
+                    android:background="@drawable/cell_color_green"
+                    android:padding="3dip"
+                    android:text="75-51"
+                    />
+
+                <TextView
+                    android:background="@drawable/cell_color_green"
+                    android:padding="3dip"
+                    android:text="Moderate"
+                    />
+
+                <TextView
+                    android:background="@drawable/cell_color_green"
+                    android:padding="3dip"
+                    android:text="2"
+                    />
+
+            </TableRow>
+
+
+            <TableRow android:layout_gravity="center">
+
+                <TextView
+                    android:background="@drawable/cell_color_yellow"
+                    android:padding="3dip"
+                    android:text="50-26"
+                    />
+
+                <TextView
+                    android:background="@drawable/cell_color_yellow"
+                    android:padding="3dip"
+                    android:text="Unhealthy"
+                    />
+                <TextView
+                    android:background="@drawable/cell_color_yellow"
+                    android:padding="3dip"
+                    android:text="1"
+                    />
+
+            </TableRow>
+
+
+            <TableRow android:layout_gravity="center">
+
+                <TextView
+                    android:background="@drawable/cell_color_red"
+                    android:padding="3dip"
+                    android:text="25-0"
+                    />
+
+                <TextView
+                    android:background="@drawable/cell_color_red"
+                    android:padding="3dip"
+                    android:text="Hazardous"
+                    />
+                <TextView
+                    android:background="@drawable/cell_color_red"
+                    android:padding="3dip"
+                    android:text="-3"
+                    />
+
+            </TableRow>
+        </TableLayout>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <TableRow android:layout_gravity="center"
+                >
+
+                <TextView
+                    android:background="@drawable/cell_shape"
+                    android:padding="3dip"
+                    android:text="TCI\n"
+                    />
+
+                <TextView
+                    android:background="@drawable/cell_shape"
+                    android:padding="3dip"
+                    android:text=" TCI\nStatus "
+                    />
+                <TextView
+                    android:background="@drawable/cell_shape"
+                    android:padding="3dip"
+                    android:text="TCI\n Weightage"
+                    />
+
+
+            </TableRow>
+
+            <TableRow android:layout_gravity="center"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:background="@drawable/cell_color_blue"
+                    android:padding="3dip"
+                    android:text="100-76"
+                    />
+
+                <TextView
+                    android:background="@drawable/cell_color_blue"
+                    android:padding="3dip"
+                    android:text="Most Comfort"
+                    />
+                <TextView
+                    android:background="@drawable/cell_color_blue"
+                    android:padding="3dip"
+                    android:text="3"
+                    />
+            </TableRow>
+
+            <TableRow android:layout_gravity="center">
+
+
+                <TextView
+                    android:background="@drawable/cell_color_green"
+                    android:padding="3dip"
+                    android:text="75-51"
+                    />
+
+                <TextView
+                    android:background="@drawable/cell_color_green"
+                    android:padding="3dip"
+                    android:text="Comfort"
+                    />
+                <TextView
+                    android:background="@drawable/cell_color_green"
+                    android:padding="3dip"
+                    android:text="2"
+                    />
+            </TableRow>
+
+            <TableRow android:layout_gravity="center">
+
+                <TextView
+                    android:background="@drawable/cell_color_yellow"
+                    android:padding="3dip"
+                    android:text="50-26"
+                    />
+
+                <TextView
+                    android:background="@drawable/cell_color_yellow"
+                    android:padding="3dip"
+                    android:text="Not Comfort"
+                    />
+
+                <TextView
+                    android:background="@drawable/cell_color_yellow"
+                    android:padding="3dip"
+                    android:text="1"
+                    />
+            </TableRow>
+
+            <TableRow android:layout_gravity="center">
+
+
+                <TextView
+                    android:background="@drawable/cell_color_red"
+                    android:padding="3dip"
+                    android:text="25-0"
+                    />
+
+                <TextView
+                    android:background="@drawable/cell_color_red"
+                    android:padding="3dip"
+                    android:text="Least Comfort"
+                    />
+
+                <TextView
+                    android:background="@drawable/cell_color_red"
+                    android:padding="3dip"
+                    android:text="0" />
+            </TableRow>
+        </TableLayout>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+
+        <TableLayout
+
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableRow android:layout_gravity="center"
+                >
+
+                <TextView
+                    android:background="@drawable/cell_shape"
+                    android:padding="3dip"
+                    android:text="EIAQI\nStatus "
+                    />
+                <TextView
+                    android:background="@drawable/cell_shape"
+                    android:padding="3dip"
+                    android:text="Total\n Weightage "
+                    />
+
+
+            </TableRow>
+
+            <TableRow android:layout_gravity="center"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:background="@drawable/cell_color_blue"
+                    android:padding="3dip"
+                    android:text="Excellent"
+                    />
+                <TextView
+                    android:background="@drawable/cell_color_blue"
+                    android:padding="3dip"
+                    android:text="7"
+                    />
+
+            </TableRow>
+
+            <TableRow android:layout_gravity="center">
+
+                <TextView
+                    android:background="@drawable/cell_color_green"
+                    android:padding="3dip"
+                    android:text="Good"
+                    />
+
+                <TextView
+                    android:background="@drawable/cell_color_green"
+                    android:padding="3dip"
+                    android:text="6-4"
+                    />
+
+            </TableRow>
+
+
+            <TableRow android:layout_gravity="center">
+
+                <TextView
+                    android:background="@drawable/cell_color_yellow"
+                    android:padding="3dip"
+                    android:text="Bad"
+                    />
+                <TextView
+                    android:background="@drawable/cell_color_yellow"
+                    android:padding="3dip"
+                    android:text="3-2"
+                    />
+
+            </TableRow>
+
+
+            <TableRow android:layout_gravity="center">
+
+                <TextView
+                    android:background="@drawable/cell_color_red"
+                    android:padding="3dip"
+                    android:text="Worst"
+                    />
+                <TextView
+                    android:background="@drawable/cell_color_red"
+                    android:padding="3dip"
+                    android:text="1"
+                    />
+
+            </TableRow>
+        </TableLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reference: S. M. Saad, A. Y. M. Shakaff, A. R. M. Saad, A. M. Yusof, A. M. Andrew, A. Zakaria, and A. H. Adom, 'Development of indoor environmental index: Air quality index and thermal comfort
+index', AIP Conference Proceedings 1808, 020043 (2017); doi: 10.1063/1.4975276"/>
+    </LinearLayout>
+
+</ScrollView>
+</FrameLayout>

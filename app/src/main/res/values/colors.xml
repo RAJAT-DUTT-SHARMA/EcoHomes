@@ -1,0 +1,12 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<resources>
+    <color name="primaryColor">#008000</color>
+    <color name="primaryLightColor">#008000</color>
+    <color name="primaryDarkColor">#008000</color>
+    <color name="secondaryColor">#ff9100</color>
+    <color name="secondaryLightColor">#ffc246</color>
+    <color name="secondaryDarkColor">#c56200</color>
+    <color name="primaryTextColor">#000000</color>
+    <color name="secondaryTextColor">#eceff1</color>
+    <color name="humidityColor">#0091EA</color>
+</resources>

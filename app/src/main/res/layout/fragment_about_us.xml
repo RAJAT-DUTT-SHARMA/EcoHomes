@@ -1,0 +1,37 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="iot.iiitb.com.ecohome.AboutUs">
+
+    <!-- TODO: Update blank fragment layout -->
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+        android:orientation="vertical"
+     >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About Us"
+        android:textSize="25sp"
+        android:paddingLeft="10dp"
+        />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TEAM  :  ECO SPARKS"
+        android:textAlignment="center"
+        android:textSize="20sp"
+    />
+
+     <TextView
+         android:layout_margin="10dp"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="TEAM MEMBERS : \n\n\t\t RAJAT DUTT SHARMA \n\t\t [  RAJATDUTT.SHARMA@IIITB.ORG  ]\n\n\t\tNEERAJA TOKEKAR\n\t\t [  NEERAJA.TOKEKAR@IIITB.ORG  ]\n\n\t\t BHAVNA DIYALANI\n\t\t [  BHAVNA.DIYALANI@IIITB.ORG  ]"
+         android:textSize="15sp"
+         />
+ </LinearLayout>
+</FrameLayout>
